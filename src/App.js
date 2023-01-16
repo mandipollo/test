@@ -1,10 +1,13 @@
-import { Fragment } from "react";
+import classes from "./app.module.css";
+import Header from "./components/Header/Header";
+import Navbar from "./components/NavBar/Navbar";
 
 const App = () => {
 	return (
-		<Fragment>
-			<h1>E-COMMERCE</h1>
-		</Fragment>
+		<div className={classes.app}>
+			<Header />
+			<Navbar />
+		</div>
 	);
 };
 

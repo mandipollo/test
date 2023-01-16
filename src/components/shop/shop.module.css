@@ -1,0 +1,7 @@
+.shop {
+	display: flex;
+	flex-direction: row;
+	background-color: #f5f5dc;
+	height: 100vh;
+	flex-wrap: wrap;
+}

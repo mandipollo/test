@@ -1,10 +1,20 @@
-import { Fragment } from "react";
+import BestSeller from "./BestSeller";
+import BuyAgain from "./BuyAgain";
+import Menu from "./Menu";
+import NewRelease from "./NewRelease";
+import TodaysDeal from "./TodaysDeal";
+
+import classes from "./navbar.module.css";
 
 const Navbar = () => {
 	return (
-		<Fragment>
-			<h1>navbar</h1>
-		</Fragment>
+		<div className={classes.navbar}>
+			<Menu />
+			<TodaysDeal />
+			<NewRelease />
+			<BestSeller />
+			<BuyAgain />
+		</div>
 	);
 };
 

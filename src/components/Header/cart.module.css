@@ -5,3 +5,8 @@
 	justify-content: center;
 	color: white;
 }
+
+.cart:hover {
+	cursor: pointer;
+	color: #e7ab79;
+}

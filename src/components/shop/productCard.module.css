@@ -1,0 +1,10 @@
+.productCard {
+	display: flex;
+	flex-direction: column;
+	background-color: blueviolet;
+	height: 200px;
+	width: 200px;
+	margin: 3rem;
+	align-items: center;
+	color: black;
+}

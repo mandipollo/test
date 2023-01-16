@@ -1,12 +1,11 @@
-.customerID {
+.bestSeller {
 	flex: 1;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	color: white;
+	align-items: center;
 }
 
-.customerID:hover {
+.bestSeller:hover {
 	cursor: pointer;
 	color: #e7ab79;
 }

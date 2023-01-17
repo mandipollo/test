@@ -1,61 +1,63 @@
 import ProductCard from "./ProductCard";
 import classes from "./shop.module.css";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-const data = [
-	{
-		id: `p1`,
-		title: `jacket`,
-		brand: `gucci`,
-		price: 105,
-	},
-	{
-		id: `p2`,
-		title: `shirt`,
-		brand: `hermes`,
-		price: 25,
-	},
-	{
-		id: `p3`,
-		title: `shoes`,
-		brand: `calvin klein`,
-		price: 185,
-	},
-	{
-		id: `p4`,
-		title: `jacket`,
-		brand: `gucci`,
-		price: 105,
-	},
-	{
-		id: `p5`,
-		title: `jacket`,
-		brand: `gucci`,
-		price: 105,
-	},
-	{
-		id: `p6`,
-		title: `jacket`,
-		brand: `gucci`,
-		price: 105,
-	},
-	{
-		id: `p7`,
-		title: `jacket`,
-		brand: `gucci`,
-		price: 105,
-	},
-];
+import { productActions } from "../../store/productSlice";
+// const data = [
+// 	{
+// 		id: `p1`,
+// 		title: "hermes",
+// 		price: 90,
+// 		category: "shirt",
+// 		description: "a comfortable shirt made of cotton",
+// 		image: "",
+// 	},
+// 	{
+// 		id: `p2`,
+// 		title: "hermes",
+// 		price: 90,
+// 		category: "shirt",
+// 		description: "a comfortable shirt made of cotton",
+// 		image: "",
+// 	},
+// ];
+
 const Shop = () => {
+	const dispatch = useDispatch();
+	const dataFromState = useSelector(state => state.product.data);
+
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const response = await fetch(`https://fakestoreapi.com/products`);
+				if (!response.ok) {
+					throw new Error(`failed to fetch data!`);
+				}
+				const data = await response.json();
+				dispatch(productActions.getData(data));
+				console.log(data);
+			} catch (error) {
+				console.log(error);
+			}
+		}
+		fetchData();
+	}, [dispatch, dataFromState]);
+
+	console.log(dataFromState);
+
 	return (
 		<div className={classes.shop}>
-			{data.map(item => {
+			{dataFromState.map(item => {
 				return (
 					<ProductCard
 						key={item.id}
-						title={item.title}
+						category={item.category}
 						id={item.id}
-						brand={item.brand}
+						description={item.description}
+						title={item.title}
 						price={item.price}
+						image={item.image}
 					/>
 				);
 			})}

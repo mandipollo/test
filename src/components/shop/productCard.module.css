@@ -1,11 +1,12 @@
 .productCard {
 	display: flex;
 	flex-direction: column;
-	background-color: blueviolet;
-	height: 500px;
-	width: 500px;
+	background-color: white;
+	height: 300px;
+	width: 300px;
 	flex-wrap: nowrap;
-	margin: 1rem;
+	margin: 1rem 0 1rem 1rem;
 	align-items: center;
 	color: black;
+	border-radius: 1rem;
 }

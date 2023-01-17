@@ -1,6 +1,6 @@
 .shop {
 	display: flex;
 	flex-direction: row;
-	background-color: #f5f5dc;
 	flex-wrap: wrap;
+	justify-content: center;
 }

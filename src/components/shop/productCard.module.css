@@ -5,8 +5,24 @@
 	height: 300px;
 	width: 300px;
 	flex-wrap: nowrap;
-	margin: 1rem 0 1rem 1rem;
+	margin: 1rem;
 	align-items: center;
 	color: black;
-	border-radius: 1rem;
+}
+
+.price {
+	display: flex;
+
+	background-color: #f0e161;
+	font-size: small;
+	font-weight: 300;
+	height: 1.5rem;
+	width: 100px;
+	justify-content: center;
+	align-items: center;
+}
+
+.description {
+	font-size: small;
+	font-weight: 300;
 }

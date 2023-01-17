@@ -25,8 +25,10 @@ import { productActions } from "../../store/productSlice";
 
 const Shop = () => {
 	const dispatch = useDispatch();
+	// retrieve the data from state
 	const dataFromState = useSelector(state => state.product.data);
 
+	// update the state once when the component loads and render the products from the fakeshop
 	useEffect(() => {
 		async function fetchData() {
 			try {
@@ -42,7 +44,7 @@ const Shop = () => {
 			}
 		}
 		fetchData();
-	}, [dispatch, dataFromState]);
+	}, [dispatch]);
 
 	console.log(dataFromState);
 
@@ -52,9 +54,7 @@ const Shop = () => {
 				return (
 					<ProductCard
 						key={item.id}
-						category={item.category}
 						id={item.id}
-						description={item.description}
 						title={item.title}
 						price={item.price}
 						image={item.image}

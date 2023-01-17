@@ -5,7 +5,7 @@ const initialProductState = {
 	data: [],
 };
 
-// create slice
+// slice for products
 const productSlice = createSlice({
 	name: `productList`,
 	initialState: initialProductState,

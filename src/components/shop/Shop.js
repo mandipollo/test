@@ -38,15 +38,12 @@ const Shop = () => {
 				}
 				const data = await response.json();
 				dispatch(productActions.getData(data));
-				console.log(data);
 			} catch (error) {
 				console.log(error);
 			}
 		}
 		fetchData();
 	}, [dispatch]);
-
-	console.log(dataFromState);
 
 	return (
 		<div className={classes.shop}>

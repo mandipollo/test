@@ -1,17 +1,18 @@
 .sideBar {
 	height: 100%;
-	width: 100%;
+	width: 20%;
 	display: flex;
 	flex-direction: row;
 	position: absolute;
+	z-index: 1;
 }
 
-.sideBarNav {
-	flex: 2;
+.sideBarContent {
+	background-color: #fcf8e8;
+	flex: 4;
 }
 
-.overlay {
-	flex: 5;
-	background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-	z-index: 1; /* ensure it's on top */
+.hideSideBar {
+	flex: 1;
+	margin: 5rem 0 0 1rem;
 }

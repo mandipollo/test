@@ -16,3 +16,8 @@
 	flex: 1;
 	margin: 5rem 0 0 1rem;
 }
+
+.btn {
+	border: none;
+	background-color: transparent;
+}

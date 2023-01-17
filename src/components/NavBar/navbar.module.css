@@ -3,4 +3,5 @@
 	flex-direction: row;
 	background-color: #0a2647;
 	color: white;
+	position: static;
 }

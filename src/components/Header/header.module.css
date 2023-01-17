@@ -4,4 +4,7 @@
 	display: flex;
 	justify-content: center;
 	background-color: #1b2430;
+	z-index: 1;
+	width: 100%;
+	top: 0;
 }

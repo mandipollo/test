@@ -5,6 +5,11 @@
 	align-items: center;
 }
 
-.menu:hover {
+.menu button {
+	background-color: transparent;
+	border: none;
+}
+
+.menu button:hover {
 	cursor: pointer;
 }

@@ -4,7 +4,9 @@ import menu from "../assets/images/menu-white.png";
 const Menu = () => {
 	return (
 		<div className={classes.menu}>
-			<img src={menu} alt="menu"></img>
+			<button>
+				<img src={menu} alt="menu"></img>
+			</button>
 		</div>
 	);
 };

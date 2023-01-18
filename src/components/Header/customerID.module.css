@@ -6,7 +6,12 @@
 	color: white;
 }
 
-.customerID:hover {
+.customerID a {
+	text-decoration: none;
+	color: white;
+}
+
+.customerID a:hover {
 	cursor: pointer;
 	color: #e7ab79;
 }

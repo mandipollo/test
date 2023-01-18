@@ -3,7 +3,7 @@ import classes from "./cart.module.css";
 const Cart = () => {
 	return (
 		<div className={classes.cart}>
-			<p>Cart</p>
+			<a href=""> Cart</a>
 		</div>
 	);
 };

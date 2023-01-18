@@ -5,7 +5,12 @@
 	align-items: center;
 }
 
-.buyAgain:hover {
+.buyAgain a {
+	text-decoration: none;
+	color: white;
+}
+
+.buyAgain a:hover {
 	cursor: pointer;
 	color: #e7ab79;
 }

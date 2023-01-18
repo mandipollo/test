@@ -3,7 +3,7 @@ import classes from "./buyAgain.module.css";
 const BuyAgain = () => {
 	return (
 		<div className={classes.buyAgain}>
-			<p>Buy Again</p>
+			<a href="">Buy Again</a>
 		</div>
 	);
 };

@@ -5,7 +5,12 @@
 	align-items: center;
 }
 
-.bestSeller:hover {
+.bestSeller a {
+	text-decoration: none;
+	color: white;
+}
+
+.bestSeller a:hover {
 	cursor: pointer;
 	color: #e7ab79;
 }

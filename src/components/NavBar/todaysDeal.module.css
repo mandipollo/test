@@ -5,7 +5,12 @@
 	align-items: center;
 }
 
-.todaysDeal:hover {
+.todaysDeal a {
+	text-decoration: none;
+	color: white;
+}
+
+.todaysDeal a:hover {
 	cursor: pointer;
 	color: #e7ab79;
 }

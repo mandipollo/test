@@ -7,8 +7,10 @@ import Cart from "./Cart";
 
 import { useState, useEffect, Fragment } from "react";
 const Header = () => {
+	// state for navBar postion
 	const [isSticky, setIsSticky] = useState(false);
 
+	// useEffect whenever the user scrolls and handleScroll function as callback
 	useEffect(() => {
 		window.addEventListener(`scroll`, handleScroll);
 		return () => {
@@ -16,6 +18,7 @@ const Header = () => {
 		};
 	}, []);
 
+	// sets navbar position to sticky, whenever the user scrolls Y
 	const handleScroll = () => {
 		if (window.scrollY > 0) {
 			setIsSticky(true);
@@ -26,6 +29,7 @@ const Header = () => {
 
 	return (
 		<Fragment>
+			{/*render when isSticky is true and position is sticky */}
 			{isSticky && (
 				<div style={{ position: `sticky` }} className={classes.header}>
 					<Logo />
@@ -35,6 +39,8 @@ const Header = () => {
 					<Cart />
 				</div>
 			)}
+
+			{/* renders when the isSticky is false so position is relative */}
 			{!isSticky && (
 				<div className={classes.header}>
 					<Logo />

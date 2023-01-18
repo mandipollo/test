@@ -3,7 +3,7 @@ import classes from "./customerID.module.css";
 const CustomerId = () => {
 	return (
 		<div className={classes.customerID}>
-			<p>ID</p>
+			<a href="">ID</a>
 		</div>
 	);
 };

@@ -10,3 +10,13 @@
 	cursor: pointer;
 	color: #e7ab79;
 }
+
+.cart a {
+	text-decoration: none;
+	color: white;
+}
+
+.cart a:hover {
+	cursor: pointer;
+	color: #e7ab79;
+}

@@ -1,15 +1,17 @@
 .sideBar {
 	height: 100%;
-	width: 20%;
+	width: 300px;
 	display: flex;
 	flex-direction: row;
 	position: absolute;
 	z-index: 1;
+	top: 0;
 }
 
 .sideBarContent {
 	background-color: #fcf8e8;
 	flex: 4;
+	padding: 5rem 1rem 1rem 1rem;
 }
 
 .hideSideBar {

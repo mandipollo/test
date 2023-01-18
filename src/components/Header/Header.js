@@ -20,7 +20,7 @@ const Header = () => {
 
 	// sets navbar position to sticky, whenever the user scrolls Y
 	const handleScroll = () => {
-		if (window.scrollY > 0) {
+		if (window.scrollY > 300) {
 			setIsSticky(true);
 		} else {
 			setIsSticky(false);

@@ -3,7 +3,7 @@
 	flex-direction: row;
 	display: flex;
 	justify-content: center;
-	background-color: #1b2430;
+	background-color: rgba(12, 14, 41, 0.8);
 	z-index: 1;
 	width: 100%;
 	top: 0;

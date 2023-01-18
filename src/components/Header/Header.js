@@ -27,29 +27,30 @@ const Header = () => {
 		}
 	};
 
+	const stickyHeader = (
+		<div style={{ position: `sticky` }} className={classes.header}>
+			<Logo />
+			<Address />
+			<SearchBar />
+			<CustomerId />
+			<Cart />
+		</div>
+	);
+
+	const staticHeader = (
+		<div className={classes.header}>
+			<Logo />
+			<Address />
+			<SearchBar />
+			<CustomerId />
+			<Cart />
+		</div>
+	);
+
 	return (
 		<Fragment>
-			{/*render when isSticky is true and position is sticky */}
-			{isSticky && (
-				<div style={{ position: `sticky` }} className={classes.header}>
-					<Logo />
-					<Address />
-					<SearchBar />
-					<CustomerId />
-					<Cart />
-				</div>
-			)}
-
-			{/* renders when the isSticky is false so position is relative */}
-			{!isSticky && (
-				<div className={classes.header}>
-					<Logo />
-					<Address />
-					<SearchBar />
-					<CustomerId />
-					<Cart />
-				</div>
-			)}
+			{/* conditionally update header position  */}
+			{!isSticky ? staticHeader : stickyHeader}
 		</Fragment>
 	);
 };

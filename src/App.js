@@ -5,18 +5,18 @@ import Shop from "./components/shop/Shop";
 
 import SideBar from "./components/sideBar/SideBar";
 import { useSelector } from "react-redux";
+import RollProducts from "./components/rollProducts/RollProducts";
 
 const App = () => {
 	const sideBarState = useSelector(state => state.sideBar.isVisible);
-	console.log(sideBarState);
+	const showContent = useSelector(state => state.roll.isVisible);
 
 	return (
 		<div className={classes.app}>
 			{sideBarState && <SideBar />}
-
 			<Header />
 			<Navbar />
-			<Shop />
+			{showContent ? <Shop /> : <RollProducts />}
 		</div>
 	);
 };
